@@ -116,8 +116,8 @@ SyntaxError<b style="color: green">: invalid syntax</b>
 
     function highlight() {
       var outputDiv = $("#outputDiv")
-      var originalContent = "here be output\n  ..multiline"
-      var re = new RegExp('(be)')
+      var originalContent = "here be output\n  ..bemultiline"
+      var re = new RegExp('(be)', 'g')
       outputDiv.innerHTML = originalContent.replace(re,
         "<b style='color: blue'>$1</b>")
 
