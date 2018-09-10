@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta http-equiv="refresh" content="2">
+  <!-- <meta http-equiv="refresh" content="2"> -->
   <meta charset="utf-8">
   <title>Web Watch</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
@@ -17,16 +17,45 @@
       </div>
     </div>
 
-    <hr />
+    <!-- <div style="background-color: #eeeeff; padding: 5px; border-color: black; border: 1px black;"> -->
 
     <div class="row">
       <div class="twelve columns">
-        <h3>Input</h3>
+        <pre>
+>>> dofij 2o
+  File "myscript.py", <b style="color: red">line 10</b>
+    brave 666 new world
+          ^
+SyntaxError<b style="color: green">: invalid syntax</b>
+        </pre>
       </div>
     </div>
 
     <div class="row">
       <div class="twelve columns">
+        <div style="text-align: center; background-color: red;">
+          Exit code: -1
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <hr>
+<!--     <div class="row">
+      <div class="twelve columns">
+        <h3>Configure</h3>
+      </div>
+    </div>
+ -->
+    <div class="row">
+      <div class="twelve columns">
+        <h4>Options</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="twleve columns">
         <label for="cmdline">Command line</label>
         <input id="cmdline"
                type="text"
@@ -37,66 +66,27 @@
     </div>
 
     <div class="row">
-      <div class="eight columns">
+      <div class="six columns">
         <label>Automatic refresh</label>
         <a class="button button-primary" href="#">On</a>
         <a class="button">Off</a>
       </div>
-      <div class="four columns">
+      <div class="six columns">
         <label for="refresh">Refresh rate (s)</label>
         <input id="refresh" value="2" type="number" class="u-fill-width">
       </div>
     </div>
 
-    <hr />
-
-    <div class="row">
-      <div class="twelve columns">
-        <h3>Output</h3>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="twelve columns">
-        <h5>Exit code</h5>
-        <div style="text-align: center; background-color: red;">
-          -1
-        </div>
-      </div>
-    </div>
-
     <div class="row">
       <div class="six columns">
-        <h5>Standard out</h5>
-      </div>
-      <div class="six columns">
-        <h5>Standard error</h5>
-        <pre>
->>> dofij 2o
-  File "myscript.py", <b style="color: red">line 10</b>
-    brave 39 world
-          ^
-SyntaxError<b style="color: green">: invalid syntax</b>
-        </pre>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="twelve columns">
-        <h4>Coloring</h4>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="six columns">
-        <label style="color: red" for="red_regex">Red</label>
+        <label style="color: red" for="red_regex">Regex Red</label>
         <input id="red_regex"
                type="text"
                class="u-fill-width"
                value="line \d+">
       </div>
       <div class="six columns">
-        <label style="color: green" for="green_regex">Green</label>
+        <label style="color: green" for="green_regex">Regex Green</label>
         <input id="green_regex"
                type="text"
                class="u-fill-width"
@@ -104,6 +94,15 @@ SyntaxError<b style="color: green">: invalid syntax</b>
       </div>
     </div>
 
+    <div class="row">
+      <div class="six columns">
+        <label for="red_regex">Ignore lines</label>
+        <input id="red_regex"
+               type="text"
+               class="u-fill-width"
+               value="^$">
+      </div>
+    </div>
   </div>
 
   <script>
