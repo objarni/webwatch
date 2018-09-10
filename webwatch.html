@@ -29,6 +29,10 @@
           ^
 SyntaxError<b style="color: green">: invalid syntax</b>
         </pre>
+        <pre id="outputDiv" style="font: monospace">
+          Here be output
+           ... multiline
+        </pre>
       </div>
     </div>
 
@@ -105,6 +109,22 @@ SyntaxError<b style="color: green">: invalid syntax</b>
   </div>
 
   <script>
+
+    function $(id) {
+      return document.getElementById(id.substr(1));
+    }
+
+    function highlight() {
+      var outputDiv = $("#outputDiv")
+      var originalContent = "here be output\n  ..multiline"
+      var re = new RegExp('(be)')
+      outputDiv.innerHTML = originalContent.replace(re,
+        "<b style='color: blue'>$1</b>")
+
+    }
+
+    setTimeout(highlight, 1000);
+
   </script>
 
 </body>
